@@ -1,0 +1,132 @@
+body {
+	width: 100%;
+	height: 750px;
+}
+
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.main-login-wrapper {
+    width: 425px;
+    height: 350px;
+    margin: 25px auto;
+    padding: 15px 20px;
+    background-color: rgb(122, 112, 151, .8);
+    -webkit-box-shadow: -7px 9px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -7px 9px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -7px 9px 5px 0px rgba(0,0,0,0.75);
+}
+
+.inner-content {
+    margin-top: 15px;
+}
+
+/* modified input fields */
+.input-modified {
+    border-radius: 0;
+    height: 45px;
+}
+
+.button-modified {
+    border-radius: 0;
+    height: 45px;
+    width: 100%;
+}
+
+
+/* Modal Sign Up */
+.modal-sign-up-body {
+    padding: 1em 1.2em;
+}
+
+/* container-fluid */
+.container-fluid {
+    padding: 0;
+}
+
+
+/* navbar */
+.navbar.navbar-default {
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    width: 100%;
+    height: 65px;
+    background-color: rgba(31, 3, 110, 0.6);
+}
+
+.navbar-inner {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-col-left {
+    float: left;
+    width: 15%;
+    height: 65px;
+}
+
+.navbar-col-right {
+    float: left;
+    width: 85%;
+    height: 65px;
+} 
+.navbar-col-right ul li {
+    height: 65px;
+    width: 125px;
+    text-align: center;
+    margin-right: 15px;
+} .navbar-col-right ul li:hover,
+.navbar-col-right ul li:focus {
+    background-color: rgba(113, 76, 219, 0.3);
+}
+
+.navbar-col-right ul li a {
+    height: 65px;
+    color: #fff !important;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+
+/* animation */
+
+
+
+
+
+
+/* media queries at max-width of 992px */
+@media screen and (max-width: 992px) {
+
+}
+
+
+/* media queries at max-width of 767px */
+@media screen and (max-width: 767px) {
+
+    .navbar-inner {
+        position: relative;
+    }
+
+    .navbar-col-left {
+        width: 100%;
+    }
+
+    .navbar-col-right {
+        width: 100%;
+        height: auto;
+        background-color: rgba(113, 76, 219, 0.6);
+    } .navbar-col-right ul {
+        width: 100%;
+        margin: 0;
+    } .navbar-col-right ul li {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,11 @@
+@media screen and (min-width: 300px) and (max-width: 767px) {
+	.main-navbar {
+		background-color: rgba(102, 34, 156, 0.7);
+	}
+
+	/* animation */
+	.hideme {
+		display: none;
+		visibility: none;
+	}
+}
