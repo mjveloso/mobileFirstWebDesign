@@ -1,11 +1,33 @@
-@media screen and (min-width: 300px) and (max-width: 767px) {
-	.main-navbar {
-		background-color: rgba(102, 34, 156, 0.7);
-	}
+@media screen and (min-width: 10px) and (max-width: 767px) {
 
-	/* animation */
+
+	/* ANIMATIONS */
 	.hideme {
 		display: none;
-		visibility: none;
 	}
+	.showme {
+		animation: showme .5s;
+		animation-fill-mode: both;
+	}
+
+	.addheight {
+		max-height: 1000px;
+		transition: max-height .5s ease-in;
+	}
+
+	.removeheight {
+		max-height: 0;
+		transition: max-height .5s ease-out;
+	}
+
+	@keyframes showme {
+		from {
+			transform:scale(0.7);
+	        opacity:0
+		} to {
+			transform: scale(1);
+	        opacity:1
+		}
+	}
+
 }

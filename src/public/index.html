@@ -21,9 +21,9 @@
 	media="screen and (min-width: 10px) and (max-width:767px)" />
 
 </head>
-<body>
+<body ng-app="app" ng-controller="ExampleController">
 
-	<header style="display: flex; height: 75px;">
+	<header style="display: flex; height: 75px; position: relative;">
 
 		<div class="branding">
 			<!-- <img src="images/logo-brand.png" alt="main website logo" /> -->
@@ -33,35 +33,49 @@
 
 			<i id="main-navbar-bars"
 			   style="font-size: 45px;" 
-			   class="fa fa-bars" 
+			   class="fa fa-bars hidden-sm" 
 			   aria-hidden="true">		   	
 		    </i>
 
 			<i id="main-navbar-times" 
 			   style="font-size: 45px;" 
-			   class="fa fa-times hideme" 
+			   class="fa fa-times hideme hidden-sm" 
 			   aria-hidden="true">
 		    </i>
 
 		</nav>
 
+		<ul class="main-navbar-menu">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">News</a></li>
+			<li><a href="#">Contact Us</a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+
 	</header>
 
 	<script type="text/javascript" src="js/jquery/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/controllers/example-ctrl.js"></script>
 
 	<script>
 
 		$(document).ready(function() {
 
 			$('#main-navbar-bars').on('click', function() {
-				$(this).fadeOut(500);	
-				$('#main-navbar-times').delay(600).fadeIn();		
+				var autoHeight = $('.main-navbar-menu').height('auto');
+				$(this).addClass('hideme');
+				$('#main-navbar-times').removeClass('hideme').addClass('showme');
+				$('.main-navbar-menu').removeClass('removeheight').addClass('addheight');
 			});
 
 			$('#main-navbar-times').on('click', function() {
-				$(this).fadeOut(500);	
-				$('#main-navbar-bars').delay(600).fadeIn();
+				$(this).addClass('hideme');
+				$('#main-navbar-bars').removeClass('hideme').addClass('showme');
+				$('.main-navbar-menu').removeClass('addheight').addClass('removeheight');
 			});
 
 
